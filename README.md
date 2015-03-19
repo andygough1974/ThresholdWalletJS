@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Threshold signatures
 ## Immediate Task
 	Extract and encapsulate extant Java code into a usable form
@@ -42,4 +41,3 @@ http://www.cs.princeton.edu/~stevenag/threshold_sigs.pdf
 https://github.com/citp/TwoFactorBtcWallet
 =======
 # ThresholdWalletJS
->>>>>>> 4ce3234375e2b03cdbdd61c7148090aa93d8a941
