@@ -41,3 +41,15 @@ http://www.cs.princeton.edu/~stevenag/threshold_sigs.pdf
 https://github.com/citp/TwoFactorBtcWallet
 
 # ThresholdWalletJS
+## Requirements 
+Node.js
+Bower
+NPM 
+
+## Installation
+1. run npm install
+2. run bower install
+3. run node server.js --port 3000
+4. Open the browser and visit http://localhost:3000
+
+
