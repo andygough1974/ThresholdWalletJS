@@ -42,14 +42,14 @@ https://github.com/citp/TwoFactorBtcWallet
 
 # ThresholdWalletJS
 ## Requirements 
-Node.js
-Bower
-NPM 
+1. Node.js
+2. Bower
+3. npm 
 
 ## Installation
-1. run npm install
-2. run bower install
-3. run node server.js --port 3000
+1. Run npm install
+2. Run bower install
+3. Run node server.js --port 3000
 4. Open the browser and visit http://localhost:3000
 
 
