@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html data-ng-app="threshold">
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Threshold Wallet</title>
+		<link rel="stylesheet" href="/public/styles/screen.css">
+		<link rel="stylesheet" href="/public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body data-ng-controller="ThresholdCtrl">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Threshold Wallet</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a class="alink" data-ng-click="createWalletBtn()">Create Wallet</a></li>
+					<li><a class="alink" data-ng-click="sendMoneyBtn()">Send Money</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../navbar/">Balance {{btc}} BTC</a></li>
+				</ul>          
+			</div>
+		</div>
+	</nav>
+
+	<div class="container container-custom">
+		<div class="alert alert-success" role="alert" data-ng-show="isSent">You have successfull sent a money.</div>
+		<div class="panel panel-default" data-ng-show="isCreateWallet">
+			<div class="panel-heading">Create Wallet</div>
+			<div class="panel-body">
+			</div>
+		</div>
+		<div class="panel panel-default" data-ng-show="isSendMoney">
+			<div class="panel-heading">Send Money</div>
+			<div class="panel-body">
+				<form class="form-horizontal" name="sendMoneyForm" novalidate>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label pull-left">Wallet Address:</label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" data-ng-model="sendMoney.address" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label pull-left">Amount:</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" data-ng-model="sendMoney.amount" required >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label pull-left"></label>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary" data-ng-click="send()" data-ng-disabled="sendMoneyForm.$invalid">Send</button>
+                        </div>
+                    </div>                                         					
+				</form>
+			</div>
+		</div>		
+	</div>
+
+<script src="/public/bower_components/angular/angular.js"></script>
+<script src="/public/bower_components/angular-resource/angular-resource.js"></script>
+<script src="/public/scripts/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
